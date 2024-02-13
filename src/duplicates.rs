@@ -142,4 +142,10 @@ mod tests {
         vec![1, 3],
         2
     );
+    find_duplicates_test!(
+        test_find_duplicates_repeat_no_duplicates,
+        vec![1, 2, 3, 4, 1, 2, 3],
+        vec![],
+        0
+    );
 }
