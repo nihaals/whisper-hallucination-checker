@@ -1,0 +1,10 @@
+[package]
+name = "whisper-hallucination-checker"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+clap-stdin = "0.4"
+clap_complete_command = "0.5"
+srtlib = "0.1"
