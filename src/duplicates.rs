@@ -89,6 +89,24 @@ mod tests {
         8
     );
     find_duplicates_test!(
+        test_find_duplicates_two_repeated,
+        vec![1, 2, 1, 2, 1, 2, 1, 2],
+        vec![1, 2],
+        4
+    );
+    find_duplicates_test!(
+        test_find_duplicates_two_repeated_shorter,
+        vec![1, 2, 1, 2, 1, 2, 1, 2, 3, 4, 5, 3, 4, 5],
+        vec![1, 2],
+        4
+    );
+    find_duplicates_test!(
+        test_find_duplicates_two_repeated_longer_higher_count,
+        vec![1, 2, 1, 2, 1, 2, 1, 2, 3, 4, 5, 3, 4, 5, 3, 4, 5],
+        vec![3, 4, 5],
+        3
+    );
+    find_duplicates_test!(
         test_find_duplicates_two_start,
         vec![1, 2, 1, 2, 1, 2],
         vec![1, 2],
