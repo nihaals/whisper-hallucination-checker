@@ -19,7 +19,7 @@ pub fn find_duplicates<T: Eq + Clone>(items: Vec<T>) -> DuplicateResult<T> {
 
     // Identify the longest sequence
     for i in 0..items.len() {
-        for length in 1..=3 {
+        for length in 1..=5 {
             if i + 2 * length <= items.len() {
                 let sequence = &items[i..i + length];
                 let next_sequence = &items[i + length..i + 2 * length];
@@ -110,6 +110,18 @@ mod tests {
         test_find_duplicates_three,
         vec![1, 2, 3, 4, 2, 3, 4, 2, 3, 4],
         vec![2, 3, 4],
+        3
+    );
+    find_duplicates_test!(
+        test_find_duplicates_four,
+        vec![1, 2, 3, 4, 5, 2, 3, 4, 5, 2, 3, 4, 5],
+        vec![2, 3, 4, 5],
+        3
+    );
+    find_duplicates_test!(
+        test_find_duplicates_five,
+        vec![1, 2, 3, 4, 5, 6, 2, 3, 4, 5, 6, 2, 3, 4, 5, 6],
+        vec![2, 3, 4, 5, 6],
         3
     );
     find_duplicates_test!(
