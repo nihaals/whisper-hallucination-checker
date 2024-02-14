@@ -45,8 +45,8 @@ fn main() {
             let result = find_duplicates(subtitle_texts);
             if result.count > 0 {
                 println!(
-                    "Found {} repeated sequences of subtitles: {:?}",
-                    result.count, result.sequence
+                    "Found {} repeated sequences of subtitles length {}: {:?}",
+                    result.count, result.sequence.len(), result.sequence
                 );
                 exit(1);
             } else {
