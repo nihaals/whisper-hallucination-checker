@@ -19,7 +19,7 @@ enum Commands {
     /// Check if a SRT file has consecutive repeated subtitles (possibly caused by Whisper hallucinations)
     Check {
         /// The SRT file
-        #[arg(short, long, default_value = "-")]
+        #[arg(default_value = "-")]
         input: FileOrStdin,
     },
 
